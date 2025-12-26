@@ -1,8 +1,7 @@
 package com.AI.ImageGenerator.Controller;
 
-import com.AI.ImageGenerator.Controller.Service.ChatService;
+import com.AI.ImageGenerator.Service.ChatService;
 import com.AI.ImageGenerator.models.PromptRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

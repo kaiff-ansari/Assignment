@@ -1,4 +1,4 @@
-package com.AI.ImageGenerator.Controller.Service;
+package com.AI.ImageGenerator.Service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,10 +29,10 @@ public class ChatService {
             return "Prompt cannot be empty";
         }
 
-        // 🔹 Build enhanced prompt
+        // Build enhanced prompt
         String prompt = buildPrompt(message);
 
-        // 🔹 Gemini request body
+        // Gemini request body
         Map<String, Object> requestBody = Map.of(
                 "contents", new Object[]{
                         Map.of(
@@ -65,7 +65,7 @@ public class ChatService {
         }
     }
 
-    // 🔹 Extract Gemini response safely
+    // Extract Gemini response
     private String extractResponseText(String response) {
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -88,7 +88,7 @@ public class ChatService {
         }
     }
 
-    // 🔹 Prompt engineering
+    //  Prompt engineering
     private String buildPrompt(String message) {
         return """
                 Improve and professionally enhance the following message.
